@@ -1,288 +1,226 @@
 * {
   padding: 0;
-  margin: 0;
-}
+  margin: 0; }
 
 body,
 html {
   height: 100%;
   font-size: 12pt;
   scroll-behavior: smooth;
-  position: relative;
-}
+  position: relative; }
 
 #navbar {
   position: absolute;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.2);
-}
-#navbar #hamburger {
-  z-index: 100;
-  position: absolute;
-  right: 0;
-  height: 50px;
-  width: 50px;
-  padding: 5px;
-}
-@media screen and (min-width: 768px) {
+  background-color: rgba(255, 255, 255, 0.2); }
   #navbar #hamburger {
-    display: none;
-  }
-}
-#navbar #hamburger div {
-  opacity: 1;
-  width: 35px;
-  height: 5px;
-  background-color: white;
-  border-radius: 2px;
-  margin: 6px;
-  transition: all 0.4s;
-}
-#navbar #toggle {
-  display: none;
-}
-#navbar #toggle:checked + #hamburger .top {
-  transform: rotate(135deg) translate(7.5px, -7.5px);
-}
-#navbar #toggle:checked + #hamburger .meat {
-  opacity: 0;
-}
-#navbar #toggle:checked + #hamburger .bottom {
-  transform: rotate(-135deg) translate(7.5px, 7.5px);
-}
-#navbar #toggle:checked ~ #menu-1 {
-  visibility: visible;
-  opacity: 1;
-}
-#navbar #menu-1 {
-  display: flex;
-  flex-direction: column;
-  visibility: hidden;
-  padding-top: 50px;
-  opacity: 0;
-  max-height: 0;
-  transition: all 0.3s;
-}
-@media screen and (min-width: 768px) {
-  #navbar #menu-1 {
-    position: relative;
+    z-index: 100;
+    position: absolute;
     right: 0;
+    height: 50px;
+    width: 50px;
+    padding: 5px; }
+    @media screen and (min-width: 768px) {
+      #navbar #hamburger {
+        display: none; } }
+    #navbar #hamburger div {
+      opacity: 1;
+      width: 35px;
+      height: 5px;
+      background-color: white;
+      border-radius: 2px;
+      margin: 6px;
+      transition: all 0.4s; }
+  #navbar #toggle {
+    display: none; }
+  #navbar #toggle:checked + #hamburger .top {
+    transform: rotate(135deg) translate(7.5px, -7.5px); }
+  #navbar #toggle:checked + #hamburger .meat {
+    opacity: 0; }
+  #navbar #toggle:checked + #hamburger .bottom {
+    transform: rotate(-135deg) translate(7.5px, 7.5px); }
+  #navbar #toggle:checked ~ #menu-1 {
     visibility: visible;
-    opacity: 1;
-    padding-top: 0;
-    flex-direction: row;
-    justify-content: flex-end;
-    max-height: fit-content;
-  }
-}
-#navbar #menu-1 a {
-  text-decoration: none;
-  text-align: center;
-  color: white;
-  font-size: 1.5rem;
-  padding: 2px;
-  background-color: rgba(255, 255, 255, 0.2);
-}
-@media screen and (min-width: 768px) {
-  #navbar #menu-1 a {
-    background-color: rgba(255, 255, 255, 0);
-    padding: 20pt;
-  }
-}
+    opacity: 1; }
+  #navbar #menu-1 {
+    display: flex;
+    flex-direction: column;
+    visibility: hidden;
+    padding-top: 50px;
+    opacity: 0;
+    max-height: 0;
+    transition: all 0.3s; }
+    @media screen and (min-width: 768px) {
+      #navbar #menu-1 {
+        position: relative;
+        right: 0;
+        visibility: visible;
+        opacity: 1;
+        padding-top: 0;
+        flex-direction: row;
+        justify-content: flex-end;
+        max-height: fit-content; } }
+    #navbar #menu-1 a {
+      text-decoration: none;
+      text-align: center;
+      color: white;
+      font-size: 1.5rem;
+      padding: 2px;
+      background-color: rgba(255, 255, 255, 0.2); }
+      @media screen and (min-width: 768px) {
+        #navbar #menu-1 a {
+          background-color: rgba(255, 255, 255, 0);
+          padding: 20pt; } }
 
 #wrapper {
   display: flex;
   flex-direction: column;
-  width: 100%;
-}
-#wrapper header {
-  height: 100vh;
-  width: 100%;
-  background-image: url("../assets/negative-space-black-forest-dawn.jpg");
-  background-position: center;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-#wrapper header #welcome-text {
-  color: white;
-  width: 90%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-#wrapper header #welcome-text h1 {
-  font-size: 1.8rem;
-  margin: 20pt;
-  text-align: center;
-}
-#wrapper header #welcome-text p {
-  font-size: 1.4rem;
-  width: 80%;
-  margin: 20pt;
-  text-align: center;
-}
-#wrapper header .fa {
-  position: absolute;
-  bottom: 50pt;
-  transform: scale(2);
-  color: white;
-  text-decoration: none;
-}
-#wrapper main {
-  flex-grow: 1;
-  background-color: white;
-  width: 100%;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 50pt;
-}
-#wrapper main #meet-team {
-  margin: 25pt;
-  font-size: 2.3rem;
-}
-#wrapper main .row {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-@media screen and (min-width: 768px) {
-  #wrapper main .row {
-    flex-direction: row;
+  width: 100%; }
+  #wrapper header {
+    height: 100vh;
     width: 100%;
-  }
-}
-#wrapper main .row .column {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-@media screen and (min-width: 768px) {
-  #wrapper main .row .column {
-    width: 50%;
-  }
-}
-#wrapper main .row .column .team-member {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
-#wrapper main .row .column .team-member h3 {
-  text-align: center;
-  margin: 15pt;
-}
-@media screen and (min-width: 768px) {
-  #wrapper main .row .column .team-member h3 {
-    font-size: 0.9rem;
-  }
-}
-#wrapper main .row .column .team-member .img-wrapper {
-  width: 300px;
-}
-#wrapper main .row .column .team-member .img-wrapper img {
-  width: 100%;
-  border-radius: 50%;
-  box-shadow: 0px 0px 30px 0px gray;
-}
-#wrapper main .row .column .team-member .team-member-info {
-  width: 70%;
-  margin: 15pt;
-  padding: 20pt;
-  border-radius: 3pt;
-  background-color: rgba(0, 0, 0, 0.2);
-}
-@media screen and (min-width: 768px) {
-  #wrapper main .row .column .team-member .team-member-info {
-    width: auto;
-    max-width: 50%;
-  }
-}
-#wrapper main .row .column .team-member .team-member-info span {
-  font-size: 1rem;
-}
-#wrapper main .row .column .team-member .team-member-info .fa-quote-right {
-  font-size: 2rem;
-}
-#wrapper main .fa-arrow-circle-o-down {
-  position: absolute;
-  bottom: 25pt;
-  transform: scale(2);
-  color: black;
-  text-decoration: none;
-}
-#wrapper footer {
-  background-color: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.1rem;
-  width: 100%;
-}
-#wrapper footer #footer-wrapper {
-  display: flex;
-  flex-direction: column;
-  width: 80%;
-}
-@media screen and (min-width: 768px) {
-  #wrapper footer #footer-wrapper {
-    flex-direction: row;
-    align-items: baseline;
-    width: 60%;
-  }
-}
-#wrapper footer #footer-wrapper div {
-  width: 100%;
-}
-@media screen and (min-width: 768px) {
-  #wrapper footer #footer-wrapper div {
+    background-image: url("../assets/negative-space-black-forest-dawn.jpg");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    #wrapper header #welcome-text {
+      color: white;
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      #wrapper header #welcome-text h1 {
+        font-size: 1.8rem;
+        margin: 20pt;
+        text-align: center; }
+      #wrapper header #welcome-text p {
+        font-size: 1.4rem;
+        width: 80%;
+        margin: 20pt;
+        text-align: center; }
+    #wrapper header .fa {
+      position: absolute;
+      bottom: 50pt;
+      transform: scale(2);
+      color: white;
+      text-decoration: none; }
+  #wrapper main {
+    flex-grow: 1;
+    background-color: white;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 50pt; }
+    #wrapper main #meet-team {
+      margin: 25pt;
+      font-size: 2.3rem; }
+    #wrapper main .row {
+      display: flex;
+      flex-direction: column;
+      width: 100%; }
+      @media screen and (min-width: 768px) {
+        #wrapper main .row {
+          flex-direction: row;
+          width: 100%; } }
+      #wrapper main .row .column {
+        display: flex;
+        flex-direction: column;
+        width: 100%; }
+        @media screen and (min-width: 768px) {
+          #wrapper main .row .column {
+            width: 50%; } }
+        #wrapper main .row .column .team-member {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          width: 100%; }
+          #wrapper main .row .column .team-member h3 {
+            text-align: center;
+            margin: 15pt; }
+            @media screen and (min-width: 768px) {
+              #wrapper main .row .column .team-member h3 {
+                font-size: 0.9rem; } }
+          #wrapper main .row .column .team-member .img-wrapper {
+            width: 300px; }
+            #wrapper main .row .column .team-member .img-wrapper img {
+              width: 100%;
+              border-radius: 50%;
+              box-shadow: 0px 0px 30px 0px gray; }
+          #wrapper main .row .column .team-member .team-member-info {
+            width: 70%;
+            margin: 15pt;
+            padding: 20pt;
+            border-radius: 3pt;
+            background-color: rgba(0, 0, 0, 0.2); }
+            @media screen and (min-width: 768px) {
+              #wrapper main .row .column .team-member .team-member-info {
+                width: auto;
+                max-width: 50%; } }
+            #wrapper main .row .column .team-member .team-member-info span {
+              font-size: 1rem; }
+            #wrapper main .row .column .team-member .team-member-info .fa-quote-right {
+              font-size: 2rem; }
+    #wrapper main .fa-arrow-circle-o-down {
+      position: absolute;
+      bottom: 25pt;
+      transform: scale(2);
+      color: black;
+      text-decoration: none; }
+  #wrapper footer {
+    background-color: black;
     display: flex;
     justify-content: center;
-  }
-}
-#wrapper footer #footer-wrapper div #info-wrapper {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-@media screen and (min-width: 768px) {
-  #wrapper footer #footer-wrapper div #info-wrapper {
-    width: 50%;
-    display: flex;
-    justify-content: center;
-  }
-}
-#wrapper footer #footer-wrapper div #info-wrapper p {
-  font-size: 1.3rem;
-  padding: 5pt;
-  color: white;
-}
-@media screen and (min-width: 768px) {
-  #wrapper footer #footer-wrapper div #info-wrapper p {
-    font-size: 0.9rem;
-  }
-}
-#wrapper footer #footer-wrapper div #info-wrapper .fa {
-  padding: 5pt;
-  width: 15px;
-}
-#wrapper footer #footer-wrapper div #info-wrapper a {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  text-decoration: none;
-}
-#wrapper footer #company-info,
-#wrapper footer #social-info {
-  padding-top: 25pt;
-  padding-bottom: 25pt;
-}
-
-/*# sourceMappingURL=main.css.map */
+    align-items: center;
+    font-size: 1.1rem;
+    width: 100%; }
+    #wrapper footer #footer-wrapper {
+      display: flex;
+      flex-direction: column;
+      width: 80%; }
+      @media screen and (min-width: 768px) {
+        #wrapper footer #footer-wrapper {
+          flex-direction: row;
+          align-items: baseline;
+          width: 60%; } }
+      #wrapper footer #footer-wrapper div {
+        width: 100%; }
+        @media screen and (min-width: 768px) {
+          #wrapper footer #footer-wrapper div {
+            display: flex;
+            justify-content: center; } }
+        #wrapper footer #footer-wrapper div #info-wrapper {
+          display: flex;
+          flex-direction: column;
+          width: 100%; }
+          @media screen and (min-width: 768px) {
+            #wrapper footer #footer-wrapper div #info-wrapper {
+              width: 50%;
+              display: flex;
+              justify-content: center; } }
+          #wrapper footer #footer-wrapper div #info-wrapper p {
+            font-size: 1.3rem;
+            padding: 5pt;
+            color: white; }
+            @media screen and (min-width: 768px) {
+              #wrapper footer #footer-wrapper div #info-wrapper p {
+                font-size: 0.9rem; } }
+          #wrapper footer #footer-wrapper div #info-wrapper .fa {
+            padding: 5pt;
+            width: 15px; }
+          #wrapper footer #footer-wrapper div #info-wrapper a {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            text-decoration: none; }
+    #wrapper footer #company-info,
+    #wrapper footer #social-info {
+      padding-top: 25pt;
+      padding-bottom: 25pt; }

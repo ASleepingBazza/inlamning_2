@@ -1,4 +1,5 @@
-@use "mixins";
+//@use "mixins";
+@import "mixins";
 
 * {
     padding: 0;
@@ -25,7 +26,7 @@ html {
         height: 50px;
         width: 50px;
         padding: 5px;
-        @include mixins.tablet-desktop {
+        @include tablet-desktop {
             display: none;
         }
 
@@ -71,7 +72,7 @@ html {
         opacity: 0;
         max-height: 0;
         transition: all 0.3s;
-        @include mixins.tablet-desktop {
+        @include tablet-desktop {
             position: relative;
             right: 0;
             visibility: visible;
@@ -89,7 +90,7 @@ html {
             font-size: 1.5rem;
             padding: 2px;
             background-color: rgba(255, 255, 255, 0.2);
-            @include mixins.tablet-desktop {
+            @include tablet-desktop {
                 background-color: rgba(255, 255, 255, 0);
                 padding: 20pt;
             }
@@ -164,7 +165,7 @@ html {
             display: flex;
             flex-direction: column;
             width: 100%;
-            @include mixins.tablet-desktop {
+            @include tablet-desktop {
                 flex-direction: row;
                 width: 100%;
             }
@@ -173,7 +174,7 @@ html {
                 display: flex;
                 flex-direction: column;
                 width: 100%;
-                @include mixins.tablet-desktop {
+                @include tablet-desktop {
                     width: 50%;
                 }
 
@@ -187,7 +188,7 @@ html {
                     h3 {
                         text-align: center;
                         margin: 15pt;
-                        @include mixins.tablet-desktop {
+                        @include tablet-desktop {
                             font-size: 0.9rem;
                         }
                     }
@@ -208,7 +209,7 @@ html {
                         padding: 20pt;
                         border-radius: 3pt;
                         background-color: rgba(0, 0, 0, 0.2);
-                        @include mixins.tablet-desktop {
+                        @include tablet-desktop {
                             width: auto;
                             max-width: 50%;
                         }
@@ -247,7 +248,7 @@ html {
             flex-direction: column;
             width: 80%;
 
-            @include mixins.tablet-desktop {
+            @include tablet-desktop {
                 flex-direction: row;
                 align-items: baseline;
                 width: 60%;
@@ -255,7 +256,7 @@ html {
 
             div {
                 width: 100%;
-                @include mixins.tablet-desktop {
+                @include tablet-desktop {
                     display: flex;
                     justify-content: center;
                 }
@@ -264,14 +265,14 @@ html {
                     display: flex;
                     flex-direction: column;
                     width: 100%;
-                    @include mixins.tablet-desktop {
+                    @include tablet-desktop {
                         width: 50%;
                         display: flex;
                         justify-content: center;
                     }
 
                     p {
-                        @include mixins.tablet-desktop {
+                        @include tablet-desktop {
                             font-size: 0.9rem;
                         }
                         font-size: 1.3rem;
